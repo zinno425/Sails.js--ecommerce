@@ -1,0 +1,30 @@
+<form action="/cart" method="post">
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>s.no </th>
+      <th>Product Name</th>
+      <th>Product Image</th>
+      <th>Product price</th>
+      <th>Product category</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% cart.forEach(astnc element){
+      <tr>
+        <td><%= i++%></td>
+        <td><%= element.pName %></td>
+        <td><%= element.pImage %></td>
+        <td><%= element.pPrice %></td>
+        <td><%= element.pCategory %></td>
+       <td><a href="/deleteFromCart"></a></td>
+      </tr>
+    <%}%>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+  <button type="submit"> Buy </button>
+</table>
+</form>

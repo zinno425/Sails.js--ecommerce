@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Admin</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="/admin/index"><a href="#">Home</a></li>
+
+      <li><a href="/admin/addProduct">AddProduct</a></li>
+      <li><a href="/admin/viewProduct">ViewProducts</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <% if (req.session.userId === "undefined") {  %>
+        <li><a href="/admin/logIn"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <% } else { %>
+
+        <li><a href="/admin/logOut"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+         <% } %>
+
+
+
+
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <%- body %>
+
+
+</main>
+</body>
+</html>
